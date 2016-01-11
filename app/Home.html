@@ -4,43 +4,78 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Nasa App</title>
+    <link rel="icon" type="image" href="fav.ico">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link resource="stylesheet" href="lib/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<nav  class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="Home.html">Home</a></li>
+    </ul>
+    </div>
+</nav>
 <div class="container" ng-controller="LocationController as location">
-<form class="form-inline">
+    <div class="row">
+<div class="col-md-6">
+    <form class="form-inline">
     <div class="form-group">
         <label for="frmPostcode" class="control-label">Postcode</label>
-        <input class="form-control" id="frmPostcode" placeholder="Enter your postcode..." ng-model="location.address.postcode">
+        <input class="form-control" id="frmPostcode" placeholder="Enter your postcode..." ng-model="location.address.postcode" required>
+        <span style="color:red" ng-show="location.address.postcode.$invalid">
+  <span ng-show="location.address.postcode.$error.required">Postcode is required.</span>
+            </span>
+  </span>
     </div>
     <div class="form-group">
-    <button type="submit" class="btn btn-success" ng-click="location.FindLastImage()">Submit</button>
+    <button type="submit" class="btn btn-success" ng-click="location.GetLatLong()">Find lat/long</button>
     </div>
     <div class="row" nd-show="location.errorMessage">
         {{location.errorMessage}}
     </div>
-    <div class="row">
-       <lable>Latitude:</lable> {{location.address.lat}}
-    </div>
-    <div class="row">
-        <lable>Longitude:</lable> {{location.address.lon}}
-    </div>
 </form>
+</div>
     <div class="col-md-6">
-        <ul>
-            <li ng-repeat="image in location.nasaImages | orderBy: '-date' ">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Latitude</div>
+            <div class="panel-body">
+                {{location.address.lat}}
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Longitude</div>
+            <div class="panel-body">
+                {{location.address.lon}}
+            </div>
+        </div>
+  </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-6">
+            <button type="submit" class="btn btn-info btn-lg" ng-click="location.GetListOfImages()">List of Images from Nasa</button>
+                </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-6">
+        <div class="list-group">
+            <ul class="list-group">
+            <li class="list-group-item" ng-repeat="image in location.nasaImages | orderBy: '-date' ">
+               <td>
                 <a ng-click="location.ShowImageOfDay(image.date)">
                     {{image.date | date : 'yyyy MMM dd'}}
                 </a>
+               </td>
             </li>
-        </ul>
+            </ul>
+        </div>
     </div>
     <div class="col-md-6">
-        <img src="{{location.imageUrl}}">
+        <img ng-show="location.imageUrl" src="{{location.imageUrl}}">
     </div>
 </div>
+        </div>
 <script src="lib/jQuery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/AngularJS/angular.min.js"></script>
