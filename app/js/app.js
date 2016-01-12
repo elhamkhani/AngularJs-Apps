@@ -4,6 +4,20 @@
 
 var nasaApp = angular.module('nasaApp', []);
 
+
+/*///////////////////////////////////////////////
+////Data sharing service
+///////////////////////////////////////////////*/
+nasaApp.factory('DataSharingService', function(){
+    return {
+        lat:'',
+        lon:''
+    }
+});
+
+/*//////////////////////////////////////////////////
+///// Geocode Service
+/////////////////////////////////////////////////*/
 nasaApp.factory('GeocodeService',  function($http,$q){
 
     var googleKey ='AIzaSyCcAd_LTLqtzoCqTHShUxNjGLPxfCsTABo';
@@ -27,16 +41,20 @@ nasaApp.factory('GeocodeService',  function($http,$q){
 
     GeocodeService.coordinates = function(postcode){return coordinates;}
 
+
     return GeocodeService;
 
 });
 
 
-
+/*//////////////////////////////////////////////////////////
+///// Nasa Image Service
+///////////////////////////////////////////////////////*/
 nasaApp.factory('NasaImagesService',  function($http,$q){
 
     var nasaKey ='Erj1DXpDoYLc8yl2bNOILUbprBGKQBLhKSo7BlRn';
     var dates=[];
+    var imageUrl ='';
 
     var deferred = $q.defer();
     var NasaImagesService = {};
@@ -44,13 +62,27 @@ nasaApp.factory('NasaImagesService',  function($http,$q){
     NasaImagesService.async = function(lat,lon) {
         $http.get('https://api.nasa.gov/planetary/earth/assets?api_key='+nasaKey+'&lat='+lat+'&lon='+lon)
             .success(function (response) {
-                dates = response.results[0];
+                dates = response.results;
                 deferred.resolve();
             });
         return deferred.promise;
     };
 
-    NasaImagesService.dates = function(lat,lon){return dates;}
+    NasaImagesService.dates = function(){
+        return Array.from(dates, (v,k)=> v.date);
+    }
+
+
+    /*NasaImagesService.async = function(lat,lon,date) {
+        $http.get('https://api.nasa.gov/planetary/earth/imagery?lat='+lat+'&lon='+lon+'&date='+date+'&cloud_score=True&api_key='+nasaKey)
+            .success(function (response) {
+                imageUrl = response.url;
+                deferred.resolve();
+            });
+        return deferred.promise;
+    };
+
+    NasaImagesService.imageUrl = function(){return imageUrl;}*/
 
     return NasaImagesService;
 

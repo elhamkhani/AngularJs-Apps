@@ -3,27 +3,23 @@
  */
 
 
-    nasaApp.controller('LocationController',function(GeocodeService,$scope) {
+    nasaApp.controller('LocationController',function(GeocodeService,DataSharingService,$scope) {
 
-        $scope.location={
-            address : {
+        $scope.address = {
                 postcode:'sm4 4su',
                 lat:0,
                 lon:0
-            },
-            imageUrl:'',
-            dates:[]
-        };
+            };
 
         $scope.errorMessage = '';
 
-
-
         $scope.getLatLong = function () {
-            GeocodeService.async($scope.location.address.postcode)
+            GeocodeService.async($scope.address.postcode)
                 .then( function() {
-                   $scope.location.address.lat = GeocodeService.coordinates().lat;
-                   $scope.location.address.lon = GeocodeService.coordinates().lon;
+                   $scope.address.lat = GeocodeService.coordinates().lat;
+                   $scope.address.lon = GeocodeService.coordinates().lon;
+                   DataSharingService.lat =$scope.address.lat;
+                    DataSharingService.lon = $scope.address.lon;
                });
         };
     });
