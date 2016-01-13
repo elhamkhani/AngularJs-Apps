@@ -3,9 +3,13 @@
  */
 nasaApp.controller('NasaImagesController',function(NasaDatesService, NasaImagesService,DataSharingService,$scope,$filter) {
 
-    $scope.dates=[];
-    $scope.imageUrl='';
-    $scope.errorMessage = '';
+    $scope.dates=[],
+    $scope.filteredDates = [],
+    $scope.imageUrl='',
+    $scope.errorMessage = '',
+    $scope.currentPage = 1,
+    $scope.numPerPage = 10,
+    $scope.maxSize = 5;
 
     $scope.getDates = function () {
         NasaDatesService.async(DataSharingService.lat, DataSharingService.lon)
@@ -21,6 +25,14 @@ nasaApp.controller('NasaImagesController',function(NasaDatesService, NasaImagesS
                 $scope.imageUrl = NasaImagesService.imageUrl();
             });
     };
+
+
+    $scope.$watch("currentPage + numPerPage", function() {
+        var begin = (($scope.currentPage - 1) * $scope.numPerPage)
+            , end = begin + $scope.numPerPage;
+
+        $scope.filteredDates = $scope.dates.slice(begin, end);
+    });
 
 });
 

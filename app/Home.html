@@ -22,7 +22,7 @@
         <form class="form-inline">
 <div class="col-md-6">
     <div class="panel panel-primary">
-        <div class="panel-heading">Coordination</div>
+        <div class="panel-heading">Address</div>
         <div class="panel-body">
     <div class="form-group">
         <label for="frmPostcode" class="control-label">Postcode</label>
@@ -64,16 +64,21 @@
 
         <div class="row">
         <div class="col-md-6">
+
         <div class="list-group">
             <ul class="list-group">
-            <li class="list-group-item" ng-repeat="date in dates ">
-               <td>
+            <li class="list-group-item" ng-repeat="date in filteredDates  ">
                 <a ng-click="displayImage(date)">
                     {{date | date : 'yyyy MMM dd'}}
                 </a>
-               </td>
             </li>
             </ul>
+            <pagination
+                    ng-model="currentPage"
+                    total-items="dates.length"
+                    max-size="maxSize"
+                    boundary-links="true">
+            </pagination>
         </div>
     </div>
     <div class="col-md-6">
@@ -84,8 +89,10 @@
 <script src="lib/jQuery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/AngularJS/angular.min.js"></script>
+<script src="lib/ui-bootstrap-tpls-0.12.1.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/LocationController.js"></script>
 <script src="js/NasaImagesController.js"></script>
+
 </body>
 </html>

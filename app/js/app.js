@@ -2,7 +2,7 @@
  * Created by Elham.Khani on 12/01/2016.
  */
 
-var nasaApp = angular.module('nasaApp', []);
+var nasaApp = angular.module('nasaApp', ['ui.bootstrap']);
 
 
 /*///////////////////////////////////////////////
