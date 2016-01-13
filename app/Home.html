@@ -19,8 +19,11 @@
 </nav>
 <div class="container" ng-controller="LocationController">
     <div class="row">
+        <form class="form-inline">
 <div class="col-md-6">
-    <form class="form-inline">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Coordination</div>
+        <div class="panel-body">
     <div class="form-group">
         <label for="frmPostcode" class="control-label">Postcode</label>
         <input class="form-control" id="frmPostcode" placeholder="Enter your postcode..." ng-model="address.postcode" required>
@@ -28,11 +31,11 @@
         <div class="form-group">
             <button type="submit" class="btn btn-success"  ng-click="getLatLong()">Find lat/long</button>
         </div>
+            </div>
+</div>
 
-    <div class="row" nd-show="errorMessage">
-        {{errorMessage}}
-    </div>
-</form>
+
+</div>
     <div class="col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading">Coordination</div>
@@ -44,7 +47,12 @@
             </div>
         </div>
     </div>
-    </div>
+                <div class="row" nd-show="errorMessage">
+                    {{errorMessage}}
+                </div>
+
+    </form>
+
 </div>
     </div>
 <div class="container" ng-controller="NasaImagesController" ng-init="">

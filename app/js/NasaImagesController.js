@@ -1,23 +1,24 @@
 /**
  * Created by Elham.Khani on 12/01/2016.
  */
-nasaApp.controller('NasaImagesController',function(NasaImagesService,DataSharingService,$scope) {
+nasaApp.controller('NasaImagesController',function(NasaDatesService, NasaImagesService,DataSharingService,$scope,$filter) {
 
     $scope.dates=[];
     $scope.imageUrl='';
     $scope.errorMessage = '';
 
     $scope.getDates = function () {
-        NasaImagesService.async(DataSharingService.lat, DataSharingService.lon)
+        NasaDatesService.async(DataSharingService.lat, DataSharingService.lon)
             .then( function() {
-                $scope.dates = NasaImagesService.dates();
+                $scope.dates = NasaDatesService.dates();
             });
     };
 
     $scope.displayImage = function (date) {
-        NasaImagesService.async(DataSharingService.lat, DataSharingService.lon)
+    var formattedDate = $filter('date')(date, 'yyyy-MM-dd');
+        NasaImagesService.async(DataSharingService.lat, DataSharingService.lon,formattedDate)
             .then( function() {
-                $scope.dates = NasaImagesService.dates();
+                $scope.imageUrl = NasaImagesService.imageUrl();
             });
     };
 
