@@ -64,16 +64,16 @@
 
         <div class="row">
         <div class="col-md-6">
-
+<div ng-show="isBusy"><span class='glyphicon-left glyphicon glyphicon-refresh spinning'></span>Loading ...</div>
         <div class="list-group">
             <ul class="list-group">
-            <li class="list-group-item" ng-repeat="date in filteredDates  ">
+            <li class="list-group-item" ng-repeat="date in filteredDates| orderBy:'-'  ">
                 <a ng-click="displayImage(date)">
                     {{date | date : 'yyyy MMM dd'}}
                 </a>
             </li>
             </ul>
-            <pagination
+            <pagination ng-show="dates.length"
                     ng-model="currentPage"
                     total-items="dates.length"
                     max-size="maxSize"
@@ -82,6 +82,7 @@
         </div>
     </div>
     <div class="col-md-6">
+        <div ng-show="isLoadingImage"><span class='glyphicon-left glyphicon glyphicon-refresh spinning'></span>Loading ...</div>
         <img ng-show="imageUrl" ng-src="{{imageUrl}}">
     </div>
 </div>

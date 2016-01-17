@@ -10,20 +10,29 @@ nasaApp.controller('NasaImagesController',function(NasaDatesService, NasaImagesS
     $scope.currentPage = 1,
     $scope.numPerPage = 10,
     $scope.maxSize = 5;
+    $scope.isBusy = false,
+        $scope.isLoadingImage = false,
 
     $scope.getDates = function () {
+        $scope.isBusy = true;
         NasaDatesService.async(DataSharingService.lat, DataSharingService.lon)
             .then( function() {
                 $scope.dates = NasaDatesService.dates();
-            });
+                $scope.filteredDates = $scope.dates.slice(0, $scope.numPerPage);
+            }).finally(function () {
+            $scope.isBusy = false;
+        });
     };
 
     $scope.displayImage = function (date) {
+        $scope.isLoadingImage = true;
     var formattedDate = $filter('date')(date, 'yyyy-MM-dd');
         NasaImagesService.async(DataSharingService.lat, DataSharingService.lon,formattedDate)
             .then( function() {
                 $scope.imageUrl = NasaImagesService.imageUrl();
-            });
+            }).finally(function(){
+            $scope.isLoadingImage = false;
+        });
     };
 
 
