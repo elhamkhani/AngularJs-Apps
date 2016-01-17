@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ebbb44de-cce9-4dd8-b874-2adf9acb7b2a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ApiKeys.js" afterPath="$PROJECT_DIR$/app/ApiKeys.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Home.html" afterPath="$PROJECT_DIR$/app/Home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
     </list>
     <ignored path="Nasa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +29,8 @@
       <file leaf-file-name="Home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.73077">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state vertical-scroll-proportion="-19.576923">
+              <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -59,24 +62,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14739884">
-              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
-                <marker date="1452707977294" expanded="true" signature="2041:2072" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiKeys.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApiKeys.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/ApiKeys.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="60" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.023545707">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
               </folding>
@@ -102,11 +104,11 @@
       <list>
         <option value="$PROJECT_DIR$/app/js/AddressConttroller.js" />
         <option value="$PROJECT_DIR$/app/css/style.css" />
-        <option value="$PROJECT_DIR$/app/ApiKeys.js" />
         <option value="$PROJECT_DIR$/app/js/LocationController.js" />
         <option value="$PROJECT_DIR$/app/js/NasaImagesController.js" />
         <option value="$PROJECT_DIR$/app/Home.html" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/app/ApiKeys.js" />
       </list>
     </option>
   </component>
@@ -118,8 +120,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1" />
     <option name="width" value="1598" />
-    <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -206,8 +207,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,10 +293,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="1" y="0" width="1598" height="860" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21614583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21554993" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -332,6 +333,56 @@
     <entry file="file://$PROJECT_DIR$/app/Home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/LocationController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/NasaImagesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ApiKeys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="60" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding>
             <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -365,7 +416,6 @@
           <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
-            <marker date="1452707977294" expanded="true" signature="2041:2072" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -444,10 +494,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ApiKeys.js">
+    <entry file="file://$PROJECT_DIR$/app/js/NasaImagesController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="60" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="60" />
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
           </folding>
@@ -464,20 +514,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/NasaImagesController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.73077">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state vertical-scroll-proportion="-19.576923">
+          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
           <folding>
             <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
@@ -486,11 +526,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14739884">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
-            <marker date="1452707977294" expanded="true" signature="2041:2072" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ApiKeys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.023545707">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
           </folding>
         </state>
       </provider>

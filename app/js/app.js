@@ -20,7 +20,6 @@ nasaApp.factory('DataSharingService', function(){
 /////////////////////////////////////////////////*/
 nasaApp.factory('GeocodeService',  function($http,$q){
 
-    var googleKey ='AIzaSyCcAd_LTLqtzoCqTHShUxNjGLPxfCsTABo';
     var coordinates={
         lat:0,
         lon:0
@@ -30,7 +29,7 @@ nasaApp.factory('GeocodeService',  function($http,$q){
     var GeocodeService = {};
 
     GeocodeService.async = function(postcode) {
-        $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + postcode + '&key=' + googleKey)
+        $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + postcode + '&key=' + config.googleKey)
             .success(function (response) {
                 coordinates.lat = response.results[0].geometry.location.lat;
                 coordinates.lon = response.results[0].geometry.location.lng;
@@ -52,14 +51,13 @@ nasaApp.factory('GeocodeService',  function($http,$q){
 ///////////////////////////////////////////////////////*/
 nasaApp.factory('NasaDatesService',  function($http,$q){
 
-    var nasaKey ='Erj1DXpDoYLc8yl2bNOILUbprBGKQBLhKSo7BlRn';
     var dates=[];
 
     var deferred = $q.defer();
     var NasaDatesService = {};
 
     NasaDatesService.async = function(lat,lon) {
-        $http.get('https://api.nasa.gov/planetary/earth/assets?api_key='+nasaKey+'&lat='+lat+'&lon='+lon)
+        $http.get('https://api.nasa.gov/planetary/earth/assets?api_key='+config.nasaKey+'&lat='+lat+'&lon='+lon)
             .success(function (response) {
                 dates = response.results;
                 deferred.resolve();
@@ -82,14 +80,13 @@ nasaApp.factory('NasaDatesService',  function($http,$q){
  ///////////////////////////////////////////////////////*/
 nasaApp.factory('NasaImagesService',  function($http,$q){
 
-    var nasaKey ='Erj1DXpDoYLc8yl2bNOILUbprBGKQBLhKSo7BlRn';
     var imageUrl ='';
 
     var deferred = $q.defer();
     var NasaImagesService = {};
 
     NasaImagesService.async = function(lat,lon,date) {
-        $http.get('https://api.nasa.gov/planetary/earth/imagery?lat='+lat+'&lon='+lon+'&date='+date+'&cloud_score=True&api_key='+nasaKey)
+        $http.get('https://api.nasa.gov/planetary/earth/imagery?lat='+lat+'&lon='+lon+'&date='+date+'&cloud_score=True&api_key='+config.nasaKey)
             .success(function (response) {
                 imageUrl = response.url;
                 deferred.resolve();
